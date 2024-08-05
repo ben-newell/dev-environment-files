@@ -1,2 +1,2 @@
-require("josean.core.options")
-require("josean.core.keymaps")
+require("morpheus.core.options")
+require("morpheus.core.keymaps")
