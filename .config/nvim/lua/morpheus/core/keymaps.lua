@@ -24,3 +24,18 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 
 -- search and replace
 keymap.set("n", "<leader>sr", ":%s/<C-r><C-w>//gc<Left><Left><Left>", { desc = "Search and replace current word" })
+
+-- running files within nvim
+vim.api.nvim_set_keymap("n", "<leader>r", ":w<CR>:Dispatch python3 %<CR>", { noremap = true, silent = true })
+
+-- Neo-tree toggle
+keymap.set("n", "<leader>ee", "<cmd>Neotree toggle<CR>", { desc = "Toggle Neo-tree file explorer" })
+
+-- Toggle Neo-tree on the current file
+keymap.set("n", "<leader>ef", "<cmd>Neotree reveal<CR>", { desc = "Reveal current file in Neo-tree" })
+
+-- Collapse all folders in Neo-tree
+keymap.set("n", "<leader>ec", "<cmd>Neotree collapse_all<CR>", { desc = "Collapse all in Neo-tree" })
+
+-- Refresh Neo-tree
+keymap.set("n", "<leader>er", "<cmd>Neotree refresh<CR>", { desc = "Refresh Neo-tree file explorer" })
