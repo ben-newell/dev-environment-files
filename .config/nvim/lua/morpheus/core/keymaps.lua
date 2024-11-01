@@ -27,3 +27,10 @@ vim.api.nvim_set_keymap("v", "<Tab>", ">gv", { noremap = true, silent = true })
 
 -- Un-indent selected block with Shift+Tab
 vim.api.nvim_set_keymap("v", "<S-Tab>", "<gv", { noremap = true, silent = true })
+
+-- Move selected text up
+vim.api.nvim_set_keymap("v", "K", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
+
+-- Move selected text down
+vim.api.nvim_set_keymap("v", "J", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
+
