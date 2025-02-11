@@ -1,2 +1,2 @@
-require("morpheus.core")
-require("morpheus.lazy")
+require("admin.core")
+require("admin.lazy")
